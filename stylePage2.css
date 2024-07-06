@@ -47,7 +47,7 @@ body{
     flex-direction: column;
     gap: 28px;
 }
-img{
+.hqs img{
     width: 203px;
     height: 312px;
 }

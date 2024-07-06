@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
   }
+  
 body{
+    font-family: 'Montserrat', sans-serif;
     height: 100%;
-        background: url(./AssetsPowerRangers/BackGroundColor.jpg) no-repeat top center/cover fixed;
+    background: url(./AssetsPowerRangers/BackGroundColor.jpg) no-repeat top center/cover fixed;
     display: flex;
     justify-content: center;
-}  
+}
 .container{
     max-width: 1028px;
     
@@ -20,9 +22,23 @@ body{
     gap: 128px;
 }
 .search-bar{
-    border: 1px solid green;
+    background-color: #D9D9D9;
+    border-radius: 25px;
     width: 680px;
     height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 28px;
+}
+.search{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.btn{
+    cursor: pointer;
 }
 .List-hqs{
     display: flex;
@@ -45,6 +61,12 @@ body{
 .hqs img{
     width: 203px;
     height: 312px;
+}
+.hqs h1{
+    font-weight: 900;
+}
+.hqs p{
+    font-weight: 600;
 }
 .texts{
     display: flex;

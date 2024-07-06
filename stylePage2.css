@@ -5,37 +5,49 @@
   }
 body{
     height: 100%;
-    background: linear-gradient(to top, rgb(162, 162, 255), rgb(234, 234, 255));
-    background-attachment: fixed
+    background: url(./AssetsPowerRangers/BackGround.jpg) no-repeat top center/cover fixed;
+    display: flex;
+    justify-content: center;
 }  
-#container{
+.container{
+    max-width: 1028px;
+    
     display: flex;
-    flex-wrap: wrap;
-    /* align-items: center; */
-    justify-content: center;
-    /* border: 1px solid red; */
-    height: 100vh;
-    gap: 15px;
-}
-#content{
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex-direction:column ;
-    padding-top: 20px;
-
-    height: 300px;
-    width: 300px;
-
-    /* border: 1px solid red; */
-    border-radius: 10%;
-    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 128px;
+    margin-bottom: 128px;
+    gap: 128px;
+}
+.search-bar{
+    border: 1px solid green;
+    width: 680px;
+    height: 40px;
+}
+.List-hqs{
+    display: flex;
+    flex-direction: column;
+    width: 1028px;
+    gap: 40px;
+}
+.hqs{
+    background-color: rgba(196, 196, 196, 0.5);
+    border-radius: 25px;
+    display: flex;
+    padding: 28px;
+    gap: 10px;
+}
+.texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info-hqs{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
 }
 img{
-    height: 90%;
-}
-p{
-    font-weight: 300;
-    font-size: 30px;
-    color: white;
+    width: 203px;
+    height: 312px;
 }

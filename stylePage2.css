@@ -12,8 +12,10 @@ body{
     justify-content: center;
 }
 .container{
+    min-width: 400px;
     max-width: 1028px;
-    
+    border: 3px solid black;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,11 +41,26 @@ body{
 }
 .btn{
     cursor: pointer;
+    border: none;
+    height: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 25px;
+    background-color: #2D7AED;
+    color: white;
+    font-family: 'montserrat';
+    font-size: 16px;
+    font-weight: 400;
+    transition: background-color 0.2s, transform 0.2s;
+}
+.btn:hover{
+    background-color: #020D1D;
+    transform: scale(1.1);
 }
 .List-hqs{
     display: flex;
     flex-direction: column;
-    width: 1028px;
+    width: 100%;
     gap: 40px;
 }
 .hqs{
@@ -67,6 +84,7 @@ body{
 }
 .hqs p{
     font-weight: 600;
+    font-size: 20'px;
 }
 .texts{
     display: flex;

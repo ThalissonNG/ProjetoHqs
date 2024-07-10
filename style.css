@@ -12,9 +12,9 @@ body{
     justify-content: center;
 }
 .container{
-    min-width: 400px;
+    /* min-width: 500px; */
     max-width: 1028px;
-    border: 3px solid black;
+    /* border: 3px solid black; */
 
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ body{
     gap: 128px;
 }
 .search-bar{
-    background-color: #D9D9D9;
+    background-color: #2D3133;
     border-radius: 25px;
     width: 680px;
     height: 40px;
@@ -33,6 +33,7 @@ body{
     align-items: center;
     justify-content: space-between;
     padding-left: 28px;
+    color: white;
 }
 .search{
     display: flex;
@@ -55,7 +56,7 @@ body{
 }
 .btn:hover{
     background-color: #020D1D;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 .List-hqs{
     display: flex;
@@ -64,16 +65,18 @@ body{
     gap: 40px;
 }
 .hqs{
-    background: linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(217,217,217,0.75) 100%);
+    background: linear-gradient(180deg, rgba(31, 31, 31, 0.75) 0%, rgba(31,31,31,0.75) 100%);
     border-radius: 25px;
     display: flex;
     padding: 28px;
     gap: 10px;
     transition: scale 0.2s, box-shadow 0.2s;
+    color: white;
+
 }
 .hqs:hover{
     scale: 1.01;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.75);
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.75); */
 }
 .hqs img{
     width: 203px;
@@ -83,8 +86,7 @@ body{
     font-weight: 900;
 }
 .hqs p{
-    font-weight: 600;
-    font-size: 20'px;
+    font-weight: 400;
 }
 .texts{
     display: flex;

@@ -37,7 +37,7 @@ body{
     background-color: #2D3133;
     border-radius: 25px;
     /* position: fixed; */
-    width: 680px;
+    max-width: 680px;
     height: 40px;
 
     display: flex;
@@ -48,14 +48,14 @@ body{
 }
 @media(width <= 760px){
     .search-bar{
-        width: 90%;
+        max-width: 680px;
     }
 }
 .search{
     display: flex;
     gap: 16px;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
 }
 #search-here{
     width: 100%;

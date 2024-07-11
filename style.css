@@ -68,12 +68,12 @@ body{
     background-color: #020D1D;
     /* transform: scale(1.1); */
 }
-.List-hqs{
+/* .List-hqs{
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 40px;
-}
+} */
 .list-hqs-completed{
     display: flex;
     flex-direction: column;

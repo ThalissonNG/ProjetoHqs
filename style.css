@@ -23,9 +23,20 @@ body{
     margin-bottom: 128px;
     gap: 128px;
 }
+/* @media(width <= 700px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 128px;
+        margin-bottom: 128px;
+        gap: 128px;
+    }
+} */
 .search-bar{
     background-color: #2D3133;
     border-radius: 25px;
+    /* position: fixed; */
     width: 680px;
     height: 40px;
 
@@ -76,6 +87,7 @@ body{
 } */
 .list-hqs-completed{
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     gap: 40px;
@@ -89,11 +101,18 @@ body{
     background: linear-gradient(180deg, rgba(31, 31, 31, 0.75) 0%, rgba(31,31,31,0.75) 100%);
     border-radius: 25px;
     display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 28px;
     gap: 10px;
     transition: scale 0.2s, box-shadow 0.2s;
     color: white;
-
+}
+@media(width <= 700px){
+    .hqs{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .hqs:hover{
     scale: 1.01;
@@ -103,6 +122,13 @@ body{
     width: 203px;
     height: 312px;
     object-fit: cover;
+}
+@media(width <= 768px){
+    .hqs img{
+        width: 170px;
+        height: 261px;
+        object-fit: cover;
+    }
 }
 .hqs h1{
     font-weight: 900;
@@ -124,10 +150,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 .info-hqs{
     display: flex;
     flex-direction: column;
     gap: 28px;
+}
+.date{
+    width: 100%;
 }

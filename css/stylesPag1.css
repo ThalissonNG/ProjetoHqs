@@ -2,14 +2,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background: url(../AssetsPowerRangers/BackGroundColor.jpg) no-repeat top center/cover fixed;
+
 }
 .container{
-    background: rgb(247, 247, 247);
     display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    margin: 155px;
     color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.HQ{
+    background: rgba(31, 31, 31, 0.75);
+    width: 251px;
+    height: 460px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+.HQ img{
+    width: 195px;
+    height: 300px;
+    object-fit: cover;
 }
 .pdf{
     width: 100%;

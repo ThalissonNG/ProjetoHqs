@@ -20,41 +20,15 @@
             <input type="text" name="" id="search-here" placeholder="Pesquise Aqui...">
         </label>
         <ul class="list-hqs-completed">
+            {%for pasta in pastas%}
             <li class="item">
                 <a href="#" target="_blank">
-                    <img src="/static/AssetsPowerRangers/Capas/CapasMMPR/CapaMMPR00/MMPR09.webp" alt="Mighty Morphin Power Rangers" class="capa">
+                    <img src="/static/AssetsPowerRangers/Capas/{{pasta}}.webp" alt="Mighty Morphin Power Rangers" class="capa">
                     <div class="divisor" style="width: 100%; border-bottom: 1px solid gray;"></div>
-                    <h1 class="tittle">Mighty Morphin Power Rangers</h1>
+                    <h1 class="tittle">{{pasta}}</h1>
                 </a>
             </li>
-            <li class="item">
-                <a href="#" target="_blank">
-                    <img src="/static/AssetsPowerRangers/Capas/CapasMMPR/CapaMMPR00/MMPR09.webp" alt="Mighty Morphin Power Rangers" class="capa">
-                    <div class="divisor" style="width: 100%; border-bottom: 1px solid gray;"></div>
-                    <h1 class="tittle">Mighty Morphin Power Rangers</h1>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#" target="_blank">
-                    <img src="/static/AssetsPowerRangers/Capas/CapasMMPR/CapaMMPR00/MMPR09.webp" alt="Mighty Morphin Power Rangers" class="capa">
-                    <div class="divisor" style="width: 100%; border-bottom: 1px solid gray;"></div>
-                    <h1 class="tittle">Mighty Morphin Power Rangers</h1>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#" target="_blank">
-                    <img src="/static/AssetsPowerRangers/Capas/CapasMMPR/CapaMMPR00/MMPR09.webp" alt="Mighty Morphin Power Rangers" class="capa">
-                    <div class="divisor" style="width: 100%; border-bottom: 1px solid gray;"></div>
-                    <h1 class="tittle">Power Rangers - Através da Rede de Morfagem</h1>
-                </a>
-            </li>
-            <li class="item">
-                <a href="#" target="_blank">
-                    <img src="/static/AssetsPowerRangers/Capas/CapasMMPR/CapaMMPR00/MMPR09.webp" alt="Mighty Morphin Power Rangers" class="capa">
-                    <div class="divisor" style="width: 100%; border-bottom: 1px solid gray;"></div>
-                    <h1 class="tittle">Mighty Morphin Power Rangers</h1>
-                </a>
-            </li>
+            {%endfor%}
             <li id="no-results">
                 <h1>Nenhum resultado encontrato.</h1>
             </li>

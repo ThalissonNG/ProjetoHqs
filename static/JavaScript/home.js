@@ -29,5 +29,4 @@ function formatString(value){
     return value
         .toLowerCase()
         .trim();
-        
 }

@@ -7,13 +7,10 @@
 
 body{
     height: 100%;
-    background: url(../static/AssetsPowerRangers/BackGround.webp)
+    background: url(../static/AssetsPowerRangers/BackGroundColorBlur.webp)
         no-repeat
         top center/cover
         fixed;
-    display: flex;
-    justify-content: center;
-    margin: 16px;
 }
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari e Edge moderno */
@@ -38,6 +35,7 @@ body::-webkit-scrollbar {
     padding: 0 28px;
     color: white;
     cursor: text;
+    z-index: 12;
 }
 #search-here{
     width: 100%;
@@ -54,10 +52,38 @@ body::-webkit-scrollbar {
     gap: 40px;
     list-style: none;
 }
-.list-hqs-completed a{
+@media (max-width: 1024px) {
+    .list-hqs-completed{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #no-results{
+        width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .list-hqs-completed{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 425px) {
+    .search-bar{
+        width: 90%;
+    }
+    .list-hqs-completed{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 275px;
+}
+.link{
     text-decoration: none;
-    background: linear-gradient(180deg, rgba(31, 31, 31, 0.75) 0%, rgba(31,31,31,0.75) 100%);
+    background:rgba(31, 31, 31, 0.5);
     border-radius: 25px;
+    width: 275px;
     height: 476px;
     display: flex;
     flex-direction: column;
@@ -67,17 +93,33 @@ body::-webkit-scrollbar {
     color: white;
     text-align: center;
     font-size: 12px;
+    transition: all 0.2s ease-in-out;
 }
-.item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 275px;
+.link:hover{
+    background:rgba(31, 31, 31, 0.75);
+}
+.link:hover .capa{
+    transform: scale(1.05);
+}
+.link:hover .tittle{
+    text-decoration-line: underline;
+    transform: scale(1.05);
+    font-weight: 600;
 }
 .capa{
     width: 203px;
     height: 312px;
     object-fit: cover;
+    transition: all 0.2s ease-in-out;
+}
+.divisor{
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+.tittle{
+    font-size: 21px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
 }
 #no-results{
     grid-column: 1 / -1;

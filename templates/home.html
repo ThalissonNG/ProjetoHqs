@@ -22,7 +22,7 @@
         <ul class="list-hqs-completed">
             {%for pasta in pastas%}
             <li class="item">
-                <a href="#" target="_blank" class="link">
+                <a href="{{ url_for('login') }}" class="link">
                     <img src="/static/AssetsPowerRangers/Capas/{{pasta}}.webp" alt="{{pasta}}" class="capa">
                     <div class="divisor"></div>
                     <p class="tittle">{{pasta}}</p>

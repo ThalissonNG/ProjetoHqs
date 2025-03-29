@@ -1,10 +1,7 @@
 import os
-from flask import Flask, render_template
+from flask import render_template
 
-app = Flask(__name__)
-
-@app.route('/')
-def index():
+def home():
     caminho = r'E:\Mega'
     pastas = []
 
@@ -23,9 +20,3 @@ def index():
             pastas.append(item)
     print(pastas)
     return render_template('home.html', pastas=pastas)
-
-if __name__ == '__main__':
-    app.run(
-        debug=True,
-        host='0.0.0.0'
-    )

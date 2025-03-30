@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-  }
+}
 
 body{
     height: 100%;
@@ -49,8 +49,10 @@ body::-webkit-scrollbar {
 .list-hqs-completed{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 40px;
     gap: 40px;
     list-style: none;
+    min-height: 80vh;
 }
 @media (max-width: 1024px) {
     .list-hqs-completed{
@@ -125,6 +127,7 @@ body::-webkit-scrollbar {
     grid-column: 1 / -1;
     display: none;
     width: 1028px;
+    height: fit-content;
     background: linear-gradient(180deg, rgba(31, 31, 31, 0.75) 0%, rgba(31,31,31,0.75) 100%);
     border-radius: 25px;
     text-align: center;
@@ -132,3 +135,101 @@ body::-webkit-scrollbar {
     font-weight: 900;
     padding: 20px;
 }
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+    background:rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 12px;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.social-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+.social-link i{
+    font-size: 24px;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+.social-link:hover{
+    transform: scale(1.05);
+}
+.social-link:hover i{
+    background:rgba(17, 17, 17, 0.5);
+}
+.social-link p{
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.social-link:hover p{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* width: 100%; */
+    /* max-width: 500px; */
+    /* padding: 20px; */
+}
+form p{
+    width: 350px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+.campo-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.campo-form label{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+.campo-form input{
+    background-color: #2D3133;
+    color: white;
+    height: 40px;
+    width: 350px;
+    outline: none;
+    border: none;
+    border-radius: 26px;
+    padding-left: 10px;
+}
+#message {
+    height: 130px;
+}
+#botao-enviar{
+    background-color: rgb(118, 118, 255);
+    color: white;
+    width: fit-content;
+    outline: none;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 26px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+#botao-enviar:hover{
+    background-color: rgba(81, 81, 253, 0.8);
+}
+

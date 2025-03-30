@@ -35,7 +35,43 @@
         </ul>
     </div>
     <footer>
-        <p>Thalisson Manoel</p>
+        <div class="social">
+            <a href="https://www.instagram.com/thalisson.manoel/" class="social-link" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                <p>Instagram</p>
+            </a>
+            <a href="https://wa.me/5583996013954" class="social-link" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <p>Whatsapp</p>
+            </a>
+            <a href="#" class="social-link" target="_blank">
+                <i class="fa-brands fa-telegram"></i>
+                <p>Telegram</p>
+            </a>
+            <a href="https://github.com/ThalissonNG" class="social-link" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                <p>Github</p>
+            </a>
+        </div>
+        <form action="https://formsubmit.co/manoelthalisson28@gmail.com" method="POST">
+            <h1>Contate-me</h1>
+            <p>Entre em contato sobre um projeto,
+                colaboração ou apenas para dizer olá!</p>
+            <div class="campo-form nome">
+                <label for="name">Nome*</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="campo-form email">
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="campo-form mensamge">
+                <label for="message">Mensagem*</label>
+                <input type="text" name="message" id="message" required>
+            </div>
+            <input type="hidden" name="_template" value="basic">
+            <button type="submit" id="botao-enviar">Enviar</button>
+        </form>
     </footer>
     <script src="/static/JavaScript/home.js"></script>
     <script src="{{ url_for('static', filename='JavaScript/home.js') }}"></script>

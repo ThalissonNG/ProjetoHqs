@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home_hq.css') }}">
+    <link rel="stylesheet" href="/static/home_hq.css">
+    <title>Mighty Morphin Power Rangers</title>
+</head>
+<body>
+    <div class="container">
+        {% for arquivo in arquivos %}
+        <a href="{{arquivo}}" class="link-hq">
+            <img src="/static/AssetsPowerRangers/Capas/Academia Ranger.webp" alt="" class="capa" loading="lazy">
+            <div class="divisor"></div>
+            <p class="tittle">{{arquivo}}</p>
+        </a>
+        {% endfor %}
+    </div>
+    
+    <!-- <embed class="pdf" src="/static/Academia Ranger01.pdf" type="application/pdf"> -->
+</body>
+</html>

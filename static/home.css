@@ -135,21 +135,24 @@ body::-webkit-scrollbar {
     font-weight: 900;
     padding: 20px;
 }
-footer{
+footer {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     padding: 50px 0;
-    background:rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 12px;
 }
-.social{
+
+/* Layout padrão horizontal (desktop) */
+.social {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.social-link{
+
+.social-link {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -157,66 +160,87 @@ footer{
     color: white;
     transition: all 0.2s ease-in-out;
 }
-.social-link i{
+
+.social-link i {
     font-size: 24px;
     color: white;
     padding: 12px;
     border-radius: 50%;
     transition: all 0.2s ease-in-out;
 }
-.social-link:hover{
+
+.social-link:hover {
     transform: scale(1.05);
 }
-.social-link:hover i{
-    background:rgba(17, 17, 17, 0.5);
+
+.social-link:hover i {
+    background: rgba(17, 17, 17, 0.5);
 }
-.social-link p{
+
+.social-link p {
     font-size: 18px;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
 }
-.social-link:hover p{
+
+.social-link:hover p {
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* width: 100%; */
-    /* max-width: 500px; */
-    /* padding: 20px; */
+    width: 100%;
+    max-width: 500px;
 }
-form p{
-    width: 350px;
+
+form p {
     font-size: 18px;
     font-weight: 500;
     color: white;
+    width: 100%;
 }
-.campo-form{
+
+.campo-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.campo-form label{
+
+.campo-form label {
     font-size: 16px;
     font-weight: 500;
     color: white;
 }
-.campo-form input{
+
+.campo-form input,
+#message {
     background-color: #2D3133;
     color: white;
     height: 40px;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     outline: none;
     border: none;
     border-radius: 26px;
     padding-left: 10px;
+    box-sizing: border-box;
 }
+
 #message {
     height: 130px;
+    padding: 12px 16px;
+    resize: none;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.5;
 }
-#botao-enviar{
+
+/* Botão */
+#botao-enviar {
     background-color: rgb(118, 118, 255);
     color: white;
     width: fit-content;
@@ -229,7 +253,39 @@ form p{
     font-weight: 500;
     transition: all 0.2s ease-in-out;
 }
-#botao-enviar:hover{
+
+#botao-enviar:hover {
     background-color: rgba(81, 81, 253, 0.8);
 }
 
+/* 🔽 Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    footer > * {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    form {
+        align-items: center;
+    }
+
+    .campo-form input,
+    #message {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 425px) {
+    .campo-form input,
+    #message {
+        width: 100%;
+    }
+}

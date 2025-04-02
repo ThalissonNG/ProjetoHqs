@@ -8,4 +8,4 @@ def hq(nome_pasta):
     arquivos = [item for item in pastas if os.path.isfile(os.path.join(caminho, item))]
     # print(arquivos)
 
-    return render_template('home_hq.html', arquivos=arquivos)
+    return render_template('home_hq.html', arquivos=arquivos, nome_pasta=nome_pasta)

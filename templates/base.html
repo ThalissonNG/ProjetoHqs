@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="icon" href="AssetsPowerRangers/FavIcon/Verde.png" type="Icon">
+        <link rel="icon" href="{{ url_for('static', filename='/AssetsPowerRangers/FavIcon/Verde.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+        <link rel="stylesheet" href="/static/base.css">
+
+        {% block style %}
+        {% endblock %}
+
+        <title>{% block title %}Coleção Hqs Power Rangers{% endblock %}</title>
+    </head>
+<body>
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+    <footer>
+        <div class="social">
+            <a href="https://www.instagram.com/thalisson.manoel/" class="social-link" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                <p>Instagram</p>
+            </a>
+            <a href="https://wa.me/5583996013954" class="social-link" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <p>Whatsapp</p>
+            </a>
+            <a href="#" class="social-link" target="_blank">
+                <i class="fa-brands fa-telegram"></i>
+                <p>Telegram</p>
+            </a>
+            <a href="https://github.com/ThalissonNG" class="social-link" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                <p>Github</p>
+            </a>
+        </div>
+        <form action="https://formsubmit.co/manoelthalisson28@gmail.com" method="POST">
+            <h1>Contate-me</h1>
+            <p>Entre em contato sobre um projeto, colaboração ou apenas para dizer olá!</p>
+            <div class="campo-form nome">
+                <label for="name">Nome*</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="campo-form email">
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="campo-form mensamge">
+                <label for="message">Mensagem*</label>
+                <input type="text" name="message" id="message" required>
+            </div>
+            <input type="hidden" name="_template" value="basic">
+            <button type="submit" id="botao-enviar">Enviar</button>
+        </form>
+    </footer>
+    {% endblock %}
+</body>
+</html>

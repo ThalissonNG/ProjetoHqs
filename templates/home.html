@@ -30,4 +30,9 @@
     </ul>
 </div>
 
+{% block js %}
+<script src="/static/JavaScript/home.js"></script>
+<script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
+{% endblock%}
+
 {% endblock %}

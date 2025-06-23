@@ -1,7 +1,7 @@
 from flask import Flask
-from routes.home import home
-from routes.login import login
-from routes.home_hq import hq
+from Routes.home import home
+from Routes.login import login
+from Routes.home_hq import hq
 
 app = Flask(__name__)
 app.secret_key = 'THALISSON'

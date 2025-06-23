@@ -3,13 +3,13 @@ import json
 import os
 
 def login():
-    def procurar_usuario(user, senha):
-        caminho_base = os.path.dirname(__file__)
-        caminho_json = os.path.join(caminho_base,'usuarios.json')
-        with open(caminho_json, 'r', encoding='utf-8') as f: dados = json.load(f)
-        print(f"Dados do json :{dados}")
+    # def procurar_usuario(user, senha):
+    #     caminho_base = os.path.dirname(__file__)
+    #     caminho_json = os.path.join(caminho_base,'usuarios.json')
+    #     with open(caminho_json, 'r', encoding='utf-8') as f: dados = json.load(f)
+    #     print(f"Dados do json :{dados}")
 
-    procurar_usuario('admin','admin')
+    # procurar_usuario('admin','admin')
 
     if request.method == 'POST':        
         usuario = request.form.get('usuario')

@@ -15,14 +15,13 @@ header{
     background: var(--cor-elemento-secundaria);
     color: var(--cor-principal);
     box-shadow: 0 1px 3px 0 rgba(53, 71, 169, 0.1);
-;
 }
 .header-content{
     width: 100%;
     max-width: 1280px;
     display: flex;
     justify-content: space-between;
-    margin: 16px;
+    padding: 16px;
 }
 .logo{
     display: flex;
@@ -144,20 +143,6 @@ main{
     font: 12px var(--fonte-secundaria);
     color: color-mix(in srgb, var(--cor-texto-secundario) 60%, transparent);
     transition: all 0.2s ease-in-out;
-}
-.tag{
-    background: var(--cor-principal);
-    display: flex;
-    padding: 6px 12px;
-    border-radius: 999px;
-    color: var(--cor-texto-principal);
-    font: var(--fonte-principal);
-}
-.acao::before{
-    content: "Ação";
-}
-.aventura::before{
-    content: "Aventura";
 }
 .card-hq:hover{
     box-shadow: 0 8px 8px -1px rgba(53, 71, 169, 0.3);

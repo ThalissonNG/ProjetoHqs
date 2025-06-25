@@ -1,0 +1,216 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--cor-elemento-secundaria);
+    color: var(--cor-principal);
+    box-shadow: 0 1px 3px 0 rgba(53, 71, 169, 0.1);
+}
+.header-content{
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo i{
+    font-size: 28px;
+}
+.navegacao{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.botao{
+    background: transparent;
+    outline: none;
+    display: flex;
+    gap: 9px;
+    padding: 8px 12px;
+    border: 1px solid var(--cor-elemento-principal);
+    border-radius: 6px;
+    color: color-mix(in srgb, var(--cor-texto-secundario) 50%, transparent);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.botao i{
+    color: var(--cor-principal);
+}
+.botao:hover{
+    border: 1px solid var(--cor-principal);
+    color: var(--cor-texto-secundario);
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main-content{
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    padding: 32px 16px;
+    gap: 32px;
+}
+.hq-info{
+    width: 100%;
+    max-width: 400px;
+    max-height: fit-content;
+    background: var(--cor-elemento-secundaria);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px 4px rgba(53, 71, 169, 0.1);
+    overflow: hidden;
+}
+.hq-capa img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.hq-detalhes{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+}
+.titulo{
+    color: var(--cor-principal);
+}
+.descricao{
+    color: color-mix(in srgb, var(--cor-texto-secundario) 60%, transparent);
+}
+.adicional{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+    color: color-mix(in srgb, var(--cor-texto-secundario) 80%, transparent);
+}
+.adicional-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.adicional-item .valor{
+    color: var(--cor-texto-secundario);
+    font-weight: 500;
+}
+.hq-sessao{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.sessao-cabecalho{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.sessao-cabecalho p{
+    font-size: 14px;
+    color: color-mix(in srgb, var(--cor-texto-secundario) 60%, transparent);
+}
+.sessao-lista{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 16px;
+    background: var(--cor-elemento-secundaria);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px 1px rgba(53, 71, 169, 0.1);
+}
+.lista-info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.info{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cor-principal);
+}
+.info h3{
+    font-weight: 500;
+    color: var(--cor-texto-secundario);
+}
+.lista-adicional{
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    color: color-mix(in srgb, var(--cor-texto-secundario) 60%, transparent);
+}
+.lista-acao{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.hq-acao{
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 8px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-primario{
+    background: var(--cor-principal);
+    color: var(--cor-texto-principal);
+    border: 1px solid transparent;
+}
+.btn-secundario{
+    background: transparent;
+    color: var(--cor-principal);
+    border: 2px solid var(--cor-principal);
+}
+
+@media (max-width: 1024px){
+    .main-content{
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .hq-info{
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px){
+    .botao span{
+        display: none;
+    }
+    .sessao-lista{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .lista-adicional{
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .lista-acao{
+        width: 100%;
+    }
+    .hq-acao{
+        width: 100%;
+        justify-content: center;
+    }
+}

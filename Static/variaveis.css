@@ -19,3 +19,18 @@ body{
     font-family: var(--fonte-principal);
     background: var(--cor-elemento-principal);
 }
+
+.tag{
+    background: var(--cor-principal);
+    display: flex;
+    padding: 6px 12px;
+    border-radius: 999px;
+    color: var(--cor-texto-principal);
+    font: var(--fonte-principal);
+}
+.acao::before{
+    content: "Ação";
+}
+.aventura::before{
+    content: "Aventura";
+}

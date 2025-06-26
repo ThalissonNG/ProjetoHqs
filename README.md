@@ -20,15 +20,15 @@ Este projeto tem como objetivo criar uma plataforma web para leitura das HQs dos
 
 * **Python** (3.x)
 * **Flask** - framework web para backend
-* **Jinja2** - renderização de templates HTML
 * **Mega.py** - biblioteca de integração com o armazenamento na nuvem Mega
 * **HTML/CSS/JavaScript** - interface do usuário
+<!-- * **Jinja2** - renderização de templates HTML -->
 
 ## Estrutura de Permissões
 
-* **Administrador**: acesso total a todas as pastas e gestão de usuários
-* **Usuário Premium**: acesso às séries completas e lançamentos
-* **Usuário Comum**: acesso limitado a edições básicas
+* **Zordon**: acesso total a todas as pastas e gestão de usuários
+* **Ranger**: acesso às séries completas e lançamentos
+* **Alpha 5**: acesso limitado a edições básicas
 
 ## Como Funciona a Integração com o Mega
 
@@ -36,7 +36,8 @@ A biblioteca `mega.py` é utilizada para:
 
 * Autenticar com a conta do Mega
 * Listar os arquivos e pastas de HQs disponíveis
-* Gerar links temporários para leitura online (com opção de download, caso necessário)
+* Gerar links para leitura online 
+* Gerar links para download em pdf
 
 ## Objetivo Final
 
@@ -47,7 +48,7 @@ O sistema foi pensado para criar um **ambiente ideal de leitura** das HQs dos Po
 ### Clonar o repositório
 
 ```bash
-git clone https://github.com/seuusuario/projeto-hqs-power-rangers.git
+git clone https://github.com/ThalissonNG/ProjetoHqs
 cd projeto-hqs-power-rangers
 ```
 

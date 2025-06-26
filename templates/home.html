@@ -1,38 +1,68 @@
-{% extends "base.html"%}
-
-{% block style %}
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Static/home.css">
+    <link rel="stylesheet" href="/Static/variaveis.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
-    <link rel="stylesheet" href="/static/home.css">
-{% endblock %}
-
-{% block title %}home{% endblock %}
-
-{% block content %}
-
-<div class="container">
-    <label for="search-here" class="search-bar">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" name="" id="search-here" placeholder="Pesquise Aqui...">
-    </label>
-    <ul class="list-hqs-completed">
-        {%for pasta in pastas%}
-        <li class="item">
-            <a href="{{ url_for('hq', nome_pasta=pasta) }}" class="link">
-                <img src="/static/AssetsPowerRangers/Capas/{{pasta}}.webp" alt="{{pasta}}" class="capa" loading="lazy">
-                <div class="divisor"></div>
-                <p class="tittle">{{pasta}}</p>
+    <link rel="stylesheet" href="{{ url_for('static', filename='variaveis.css') }}">
+    <title>HQ Reader - Home</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                <h3>HQ Reader</h3>
+            </div>
+            <div class="navegacao">
+                <button type="button" class="botao" id="perfil">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Perfil</span>
+                </button>
+                <button type="button" class="botao" id="sair">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-content">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" name="busca" id="busca" placeholder="Buscar hq...">
+        </div>
+    </nav>
+    <main>
+        <div class="main-content">
+            <a href="page2.html" class="card-hq">
+                <div class="card-capa">
+                    <img src="/Static/Assets/Capas/Power Rangers Universo.webp" alt="capa1" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h4 class="titulo">Power Rangers Universo</h4>
+                    <div class="card-destaques">
+                        <span>6 Edições</span>
+                        <div class="tag acao"></div>
+                    </div>
+                </div>
             </a>
-        </li>
-        {%endfor%}
-        <li id="no-results">
-            <h1>Nenhum resultado encontrato.</h1>
-        </li>
-    </ul>
-</div>
-
-{% block js %}
-<script src="/static/JavaScript/home.js"></script>
-<script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
-{% endblock%}
-
-{% endblock %}
+            <a href="https://mega.nz/folder/xR1AFQrT#elT-eRgmzWqPGR-oWyIA4A" target="_blank" class="card-hq">
+                <div class="card-capa">
+                    <img src="/Static/Assets/Capas/Mighty Morphin Power Rangers - 100.webp" alt="capa1" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h4 class="titulo">Mighty Morphin Power Rangers - 100</h4>
+                    <div class="card-destaques">
+                        <span>24 Edições</span>
+                        <div class="tag aventura"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+    <script src="/Static/JavaScript/mockup.js"></script>
+</body>
+</html>
